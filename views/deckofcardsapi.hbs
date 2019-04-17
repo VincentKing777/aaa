@@ -1,0 +1,41 @@
+{{> header }}
+<div class="container"><br>
+    <h1 style="font-family: monospace; font-size: 1.2em; text-align: center">----- Deck Of Cards -----</h1>
+    {{# if cards }}
+    <div class="cart page" style="font-family: monospace;">
+        <ul class="list-group">
+            {{# each cards }}
+            <li class="list-group-item clearfix" style="margin-top: 10px">
+                {{!-- <div class="col-xs-5">
+                        <p style="font-size: 22px; margin-top: 5px">{{ this.item.title }}</p>
+                        <p>{{{this.item.description}}}</p>
+                    </div>
+                    <div class="col-xs-2 text-right" style="margin-top: 5px">
+                        <span class="badge">{{ this.quantity }}</span>
+                    </div>
+                    <div class="col-xs-3 text-right" style="margin-top: 5px">
+                        {{ this.price }} CAD
+                    </div>
+                    <div class="col-xs-2 text-right" style="margin-top: 5px">
+                        <a href="/remove/{{this.item.id}}" class="btn btn-default"></i>Remove</a>
+                    </div> --}}
+                <div>
+                    <img v-bind:src="{{images.png}}" />
+                    {{!-- <h3> {{"value: " + value}} </h3> --}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{ else }}
+    <p style="text-align: center; margin: 80px; font-size: 18px; color: lightslategray; font-family: monospace"><br>Your
+        Desk Of Cards is empty!</p>
+    {{/if}}
+</div>
+<script>
+    function checkout() {
+        if (confirm('Thanks for your purchase!')) {
+            window.location.href = '/emptycart'
+        }
+    }
+</script>

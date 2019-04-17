@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "captchapng": "0.0.1",
     "express": "^4.16.4",
-    "hbs": "^4.0.4"
-  }
+    "hbs": "^4.0.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentKing777/aaa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VincentKing777/aaa/issues"
+  },
+  "homepage": "https://github.com/VincentKing777/aaa#readme",
+  "description": ""
 }
